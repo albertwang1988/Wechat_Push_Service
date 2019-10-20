@@ -25,16 +25,14 @@ pkl_path = sys.path[0]+'/itcha.pkl' # define the pkl file path, which stores log
 
 # BATTLE CONTROL ONLINE
 
-try:
-    itchat.auto_login(hotReload=True,enableCmdQR=2,loginCallback=login,exitCallback=logout,statusStorageDir=pkl_path)
-    # hotReload makes you automatically login without authentication after a short time of logout
-    # enableCmdQR means show QRCode on CLI interface, numbers followed defined the size of QRCode
-    # loginCallback and exitCallback defines method when login and logout
-    # statusStorageDir defined pkl file path
 
-    itchat.run()
+itchat.auto_login(hotReload=True,enableCmdQR=2,loginCallback=login,exitCallback=logout,statusStorageDir=pkl_path)
+# hotReload makes you automatically login without authentication after a short time of logout
+# enableCmdQR means show QRCode on CLI interface, numbers followed defined the size of QRCode
+# loginCallback and exitCallback defines method when login and logout
+# statusStorageDir defined pkl file path
 
-except KeyboardInterrupt:
-    interrupted()
+itchat.run()
 
-# Module tested OK 10/19/2019
+
+# Module tested OK 10/20/2019
